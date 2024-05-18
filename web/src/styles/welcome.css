@@ -1,0 +1,136 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #121118;
+}
+
+video {
+    position: fixed;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+
+    left: 50%;
+    transform: translateX(-50%);
+
+    min-width: 100%;
+    min-height: 100%;
+
+    opacity: 0.2;
+}
+
+#app {
+    width: calc(100% - 30px);
+    max-width: 1416px;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#app > p:nth-child(2) {
+    color: white;
+    font-size: 56px;
+    font-weight: 700;
+
+    margin-bottom: 60px;
+}
+
+#app > p:nth-child(3) {
+    color: #f6abb5;
+    font-weight: 600;
+
+    margin-bottom: 15px;
+}
+
+#app > h1 {
+    color: white;
+    font-size: 69px;
+    font-weight: 700;
+
+    line-height: 1.0416666667;
+    letter-spacing: -.015em;
+
+    margin-bottom: 20px;
+}
+
+#app > p:nth-child(5) {
+    max-width: 680px;
+
+    color: #fde6e8;
+    font-size: 20px;
+
+    line-height: 32px;
+
+    margin-bottom: 40px;
+}
+
+#app > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+#app > div > a {
+    height: 56px;
+
+    color: white;
+    font-size: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-style: solid;
+    border-color: #d44665;
+
+    padding: 0px 30px;
+    border-radius: 8px;
+    background: linear-gradient(225deg, #ca2c50, #e54c69);
+}
+
+#app > div > a:last-child {
+    border-color: #444553;
+
+    background: none;
+    background-color: #bdc0e446;
+}
+
+@media screen and (max-width: 1000px) {
+    video {
+        display: none;
+    }
+
+    #app > h1 {
+        font-size: 32px;
+    }
+
+    #app > p:nth-child(5) {
+        font-size: 17px;
+
+        line-height: 28px;
+    }
+
+    #app > div {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #app > div > a {
+        height: 48px;
+
+        font-size: 17px;
+
+        padding: 0px 16px;
+    }
+
+    #app > div > a:nth-child(2) {
+        padding: 0px 28px;
+    }
+}
